@@ -1,0 +1,1033 @@
+{
+  "seed": 7,
+  "peers": 5,
+  "scenario": "election",
+  "events": [
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 0,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 1,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 2,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 3,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 4,
+      "role": "follower"
+    },
+    {
+      "t": 153,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "candidate"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 154,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 154,
+      "kind": "role",
+      "peer": 0,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 154,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 154,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 154,
+      "kind": "role",
+      "peer": 3,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 154,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 156,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 157,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 157,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 157,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 158,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 158,
+      "kind": "role",
+      "peer": 4,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 158,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 158,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 158,
+      "kind": "role",
+      "peer": 1,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 158,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 158,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 158,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 160,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 160,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 161,
+      "kind": "recv",
+      "peer": 2,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 164,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 164,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 165,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 165,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 165,
+      "kind": "recv",
+      "peer": 2,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 166,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 166,
+      "kind": "recv",
+      "peer": 2,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 166,
+      "kind": "recv",
+      "peer": 2,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 173,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 197,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 197,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 197,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 197,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 198,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 198,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 201,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 201,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 202,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 202,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 203,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 203,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 203,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 204,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 204,
+      "kind": "recv",
+      "peer": 2,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 207,
+      "kind": "recv",
+      "peer": 2,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 237,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 237,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 237,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 237,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 238,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 238,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 239,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 239,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 240,
+      "kind": "recv",
+      "peer": 2,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 241,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 241,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 243,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 243,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 244,
+      "kind": "recv",
+      "peer": 2,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 245,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 246,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 277,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 277,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 277,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 277,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 279,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 279,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 280,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 280,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 283,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 283,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 284,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 284,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 285,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 285,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 287,
+      "kind": "recv",
+      "peer": 2,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 287,
+      "kind": "recv",
+      "peer": 2,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 311,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 317,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 317,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 317,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 317,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 318,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 318,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 319,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 319,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 320,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 320,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 321,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 321,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 321,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 323,
+      "kind": "recv",
+      "peer": 2,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 324,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 326,
+      "kind": "recv",
+      "peer": 2,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 360,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 360,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    }
+  ]
+}

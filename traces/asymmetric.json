@@ -1,0 +1,5747 @@
+{
+  "seed": 7,
+  "peers": 5,
+  "scenario": "asymmetric",
+  "events": [
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 0,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 1,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 2,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 3,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 4,
+      "role": "follower"
+    },
+    {
+      "t": 153,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "candidate"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 153,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 154,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 154,
+      "kind": "role",
+      "peer": 0,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 154,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 154,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 154,
+      "kind": "role",
+      "peer": 3,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 154,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 156,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 157,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 157,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 157,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 157,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 158,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 158,
+      "kind": "role",
+      "peer": 4,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 158,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 158,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 158,
+      "kind": "role",
+      "peer": 1,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 158,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 158,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 158,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 160,
+      "kind": "recv",
+      "peer": 1,
+      "from": 2,
+      "to": 1,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 160,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 160,
+      "kind": "partition",
+      "peer": 0,
+      "to": 1,
+      "note": "asymmetric"
+    },
+    {
+      "t": 160,
+      "kind": "partition",
+      "peer": 0,
+      "from": 1,
+      "to": 2,
+      "note": "asymmetric"
+    },
+    {
+      "t": 160,
+      "kind": "partition",
+      "peer": 0,
+      "from": 2,
+      "note": "asymmetric"
+    },
+    {
+      "t": 160,
+      "kind": "crash",
+      "peer": 2,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 164,
+      "kind": "recv",
+      "peer": 4,
+      "from": 2,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 164,
+      "kind": "drop",
+      "peer": 4,
+      "from": 4,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 165,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 165,
+      "kind": "drop",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 345,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "candidate"
+    },
+    {
+      "t": 345,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 345,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 345,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 345,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 350,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 350,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "follower"
+    },
+    {
+      "t": 350,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 351,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 351,
+      "kind": "role",
+      "peer": 4,
+      "term": 2,
+      "role": "follower"
+    },
+    {
+      "t": 351,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 353,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 353,
+      "kind": "role",
+      "peer": 0,
+      "term": 2,
+      "role": "follower"
+    },
+    {
+      "t": 353,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVoteResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 354,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 357,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 357,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 357,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 357,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 357,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 358,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 358,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 358,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 358,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 359,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 362,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 363,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 363,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 397,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 397,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 397,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 397,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 398,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 398,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 399,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 399,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 401,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 401,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 402,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 406,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 437,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 437,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 437,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 437,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 440,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 440,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 440,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 440,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 441,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 443,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 443,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 445,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 477,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 479,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 479,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 480,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 484,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 484,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 485,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 485,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 488,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 517,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 517,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 517,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 517,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 518,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 518,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 521,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 521,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 523,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 524,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 524,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 530,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 557,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 557,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 557,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 557,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 559,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 559,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 560,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 560,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 562,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 562,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 564,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 567,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 568,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 597,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 597,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 597,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 597,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 598,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 598,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 602,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 602,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 604,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 604,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 606,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 606,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 637,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 637,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 637,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 637,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 641,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 641,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 641,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 641,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 643,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 645,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 645,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 652,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 677,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 677,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 677,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 677,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 679,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 679,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 680,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 680,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 683,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 683,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 684,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 691,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 717,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 717,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 717,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 717,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 720,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 720,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 720,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 720,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 722,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 722,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 723,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 728,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 757,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 757,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 757,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 757,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 758,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 758,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 759,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 759,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 759,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 759,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 762,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 764,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 797,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 797,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 797,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 797,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 798,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 798,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 802,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 802,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 803,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 803,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 806,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 811,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 837,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 837,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 837,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 837,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 838,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 838,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 840,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 840,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 842,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 842,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 843,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 843,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 857,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 877,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 877,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 877,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 877,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 878,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 878,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 880,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 884,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 884,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 885,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 885,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 891,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 917,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 917,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 917,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 917,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 920,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 920,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 921,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 921,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 923,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 923,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 924,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 929,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 957,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 957,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 957,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 957,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 959,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 959,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 960,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 960,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 961,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 961,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 961,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 968,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 997,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 997,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 997,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 997,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1000,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1000,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1001,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1004,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1004,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1005,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1005,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1012,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1037,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1037,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1037,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1037,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1038,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1038,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1041,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1041,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1044,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1044,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1045,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1050,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1077,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1077,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1077,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1077,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1079,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1079,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1082,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1082,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1084,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1084,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1086,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 1087,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1088,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1117,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1117,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1117,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1117,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1118,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1118,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1121,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1121,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1122,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1123,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1123,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1124,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1157,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1157,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1157,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1157,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1158,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1158,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1159,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1159,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1159,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1159,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1161,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1165,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1197,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1197,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1197,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1197,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1198,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1198,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1200,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1203,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1203,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1203,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1203,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1205,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1237,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1237,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1237,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1237,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1239,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1239,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1240,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1240,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1244,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1244,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1245,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1245,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1277,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1277,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1277,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1277,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1283,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1283,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1284,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1284,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1284,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1285,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1285,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1285,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1317,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1317,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1317,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1317,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1321,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1321,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1322,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1322,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1323,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1323,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1324,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1328,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1357,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1357,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1357,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1357,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1360,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 1361,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1361,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1364,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1364,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1365,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1365,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1366,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1369,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1397,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1397,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1397,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1397,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1398,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1398,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1405,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1405,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1405,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1405,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1409,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1409,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1437,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1437,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1437,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1437,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1438,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1438,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1440,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1440,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1441,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1441,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1447,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1448,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1477,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1480,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1480,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1480,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1480,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1482,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1482,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1486,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1490,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1517,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1517,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1517,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1517,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1519,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1519,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1521,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1521,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1523,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1525,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1525,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1527,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1557,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1557,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1557,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1557,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1563,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1563,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1564,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1564,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1565,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1565,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1568,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1573,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1597,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1597,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1597,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1597,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1599,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1599,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1601,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1601,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1601,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1604,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1605,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1605,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1637,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1637,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1637,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1637,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1638,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1638,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1639,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1639,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1641,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1645,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 1645,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1645,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1645,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1677,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1677,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1677,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1677,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1680,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1680,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1681,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1683,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1683,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1683,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1683,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1684,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1717,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1717,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1717,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1717,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1718,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1718,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1721,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1723,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1723,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1724,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1724,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1728,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1757,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1757,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1757,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1757,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1758,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1758,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1759,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1759,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1760,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1764,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1764,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1768,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1797,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1797,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1797,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1797,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1799,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1799,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1799,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1799,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1802,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1802,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1805,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1807,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1837,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1837,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1837,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1837,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1839,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1839,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1843,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1843,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1844,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1844,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1844,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1850,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1852,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 1877,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1877,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1877,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1877,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1879,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1879,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1882,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1882,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1883,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1883,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1887,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1889,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1917,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1917,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1917,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1917,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1918,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1918,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1920,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1920,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1923,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1925,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1925,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1932,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1957,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1957,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1957,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1957,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1961,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1961,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1962,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1962,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1962,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1965,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1965,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1966,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1997,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1997,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 1997,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1997,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1999,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1999,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2001,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2001,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2002,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2003,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2003,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2008,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2037,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2037,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2037,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2037,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2039,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2039,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2041,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2043,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2043,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2045,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2045,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2051,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2077,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2077,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2077,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2077,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2078,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2078,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2081,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2084,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2084,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2085,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2085,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2086,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2107,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "leader"
+    },
+    {
+      "t": 2117,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2117,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2117,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2117,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2118,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2118,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2119,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2119,
+      "kind": "drop",
+      "peer": 0,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2124,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2125,
+      "kind": "recv",
+      "peer": 4,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2125,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 2130,
+      "kind": "recv",
+      "peer": 1,
+      "from": 4,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 2157,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2157,
+      "kind": "drop",
+      "peer": 1,
+      "from": 1,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 2157,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2157,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 2159,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 2159,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    }
+  ]
+}

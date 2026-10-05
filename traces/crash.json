@@ -1,0 +1,6263 @@
+{
+  "seed": 11,
+  "peers": 5,
+  "scenario": "crash",
+  "events": [
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 0,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 1,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 2,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 3,
+      "role": "follower"
+    },
+    {
+      "t": 0,
+      "kind": "boot",
+      "peer": 4,
+      "role": "follower"
+    },
+    {
+      "t": 210,
+      "kind": "role",
+      "peer": 0,
+      "term": 1,
+      "role": "candidate"
+    },
+    {
+      "t": 210,
+      "kind": "send",
+      "peer": 0,
+      "to": 1,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 210,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 210,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 210,
+      "kind": "send",
+      "peer": 0,
+      "to": 4,
+      "term": 1,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 211,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 211,
+      "kind": "role",
+      "peer": 3,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 211,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 213,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 216,
+      "kind": "recv",
+      "peer": 1,
+      "to": 1,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 216,
+      "kind": "role",
+      "peer": 1,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 216,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 217,
+      "kind": "recv",
+      "peer": 4,
+      "to": 4,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 217,
+      "kind": "role",
+      "peer": 4,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 217,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 218,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 218,
+      "kind": "role",
+      "peer": 2,
+      "term": 1,
+      "role": "follower"
+    },
+    {
+      "t": 218,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 222,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 222,
+      "kind": "role",
+      "peer": 0,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 222,
+      "kind": "role",
+      "peer": 0,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 222,
+      "kind": "send",
+      "peer": 0,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 222,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 222,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 222,
+      "kind": "send",
+      "peer": 0,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 223,
+      "kind": "recv",
+      "peer": 0,
+      "from": 4,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 223,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 224,
+      "kind": "recv",
+      "peer": 1,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 224,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 226,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 226,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 228,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 228,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 228,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 229,
+      "kind": "recv",
+      "peer": 4,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 229,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 230,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 231,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 237,
+      "kind": "recv",
+      "peer": 0,
+      "from": 4,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 240,
+      "kind": "propose",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "log": 1,
+      "note": "k=v1"
+    },
+    {
+      "t": 240,
+      "kind": "send",
+      "peer": 0,
+      "to": 1,
+      "term": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 240,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 240,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 240,
+      "kind": "send",
+      "peer": 0,
+      "to": 4,
+      "term": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 242,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 242,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 243,
+      "kind": "recv",
+      "peer": 1,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 243,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 243,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 243,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 244,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 245,
+      "kind": "recv",
+      "peer": 4,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 245,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 248,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 248,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 249,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 249,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 250,
+      "kind": "recv",
+      "peer": 0,
+      "from": 4,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 250,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 262,
+      "kind": "send",
+      "peer": 0,
+      "to": 1,
+      "term": 1,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 262,
+      "kind": "send",
+      "peer": 0,
+      "to": 2,
+      "term": 1,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 262,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 1,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 262,
+      "kind": "send",
+      "peer": 0,
+      "to": 4,
+      "term": 1,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 262,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 264,
+      "kind": "recv",
+      "peer": 1,
+      "to": 1,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 264,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 264,
+      "kind": "commit",
+      "peer": 1,
+      "term": 1,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 265,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 265,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 265,
+      "kind": "commit",
+      "peer": 3,
+      "term": 1,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 266,
+      "kind": "recv",
+      "peer": 4,
+      "to": 4,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 266,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 266,
+      "kind": "commit",
+      "peer": 4,
+      "term": 1,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 267,
+      "kind": "recv",
+      "peer": 0,
+      "from": 4,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 267,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 268,
+      "kind": "recv",
+      "peer": 0,
+      "from": 1,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 268,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 270,
+      "kind": "recv",
+      "peer": 2,
+      "to": 2,
+      "term": 1,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 270,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 270,
+      "kind": "commit",
+      "peer": 2,
+      "term": 1,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 270,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 270,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 273,
+      "kind": "recv",
+      "peer": 0,
+      "from": 2,
+      "term": 1,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 273,
+      "kind": "commit",
+      "peer": 0,
+      "term": 1,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 280,
+      "kind": "crash",
+      "peer": 0,
+      "term": 1,
+      "role": "leader"
+    },
+    {
+      "t": 449,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "candidate",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 449,
+      "kind": "drop",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 449,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 449,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 449,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "RequestVote"
+    },
+    {
+      "t": 452,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 452,
+      "kind": "role",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 452,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 452,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 453,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 453,
+      "kind": "role",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 453,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 453,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 454,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "RequestVote",
+      "ok": true
+    },
+    {
+      "t": 454,
+      "kind": "role",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 454,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVoteResp"
+    },
+    {
+      "t": 454,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 456,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 456,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "candidate",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 458,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 458,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 458,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 458,
+      "kind": "drop",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 458,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 458,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 458,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 458,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 460,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "RequestVoteResp",
+      "ok": true
+    },
+    {
+      "t": 460,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 460,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 460,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 460,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 460,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 460,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 460,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 465,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 465,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 465,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 466,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 466,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 468,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 468,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 468,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 468,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 1
+    },
+    {
+      "t": 470,
+      "kind": "propose",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "log": 2,
+      "note": "k=v2"
+    },
+    {
+      "t": 470,
+      "kind": "drop",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 470,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 470,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 470,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 1,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 473,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 473,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 473,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 2
+    },
+    {
+      "t": 477,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 477,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 477,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 2
+    },
+    {
+      "t": 478,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 478,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 478,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 1,
+      "log": 2
+    },
+    {
+      "t": 479,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 479,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 1,
+      "log": 2
+    },
+    {
+      "t": 479,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 479,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 484,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 484,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 498,
+      "kind": "drop",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": false,
+      "note": "blocked or dead"
+    },
+    {
+      "t": 498,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 498,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 498,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 498,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 502,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 502,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 502,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 503,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 503,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 503,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 504,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 504,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 504,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 508,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 508,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 510,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 510,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 510,
+      "kind": "restart",
+      "peer": 0,
+      "term": 1,
+      "role": "follower",
+      "log": 1
+    },
+    {
+      "t": 512,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 512,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 538,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "log": 1,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 538,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 538,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 538,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 538,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 540,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 540,
+      "kind": "role",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 540,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 540,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 541,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 541,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 541,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 543,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 543,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 543,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 543,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 543,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 545,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 545,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 546,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 546,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 546,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 547,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 547,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 547,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 547,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 578,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 578,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 578,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 578,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 578,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 580,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 580,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 580,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 581,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 581,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 581,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 582,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 582,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 582,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 585,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 585,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 585,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 585,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 585,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 588,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 588,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 589,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 589,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 590,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 590,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 618,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 618,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 618,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 618,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 618,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 619,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 619,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 619,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 620,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 620,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 620,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 621,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 621,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 624,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 624,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 625,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 625,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 625,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 626,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 626,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 626,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 630,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 630,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 633,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 633,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 658,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 658,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 658,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 658,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 658,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 659,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 659,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 659,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 659,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 659,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 659,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 664,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 664,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 665,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 665,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 665,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 665,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 665,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 666,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 666,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 666,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 666,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 666,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 672,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 672,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 698,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 698,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 698,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 698,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 698,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 699,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 699,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 699,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 700,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 700,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 702,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 702,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 702,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 704,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 704,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 704,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 706,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 706,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 706,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 708,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 710,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 710,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 712,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 712,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 712,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 712,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 738,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 738,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 738,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 738,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 738,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 744,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 744,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 744,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 745,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 745,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 745,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 745,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 745,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 745,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 746,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 746,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 746,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 746,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 746,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 747,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 747,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 750,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 750,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 752,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 752,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 778,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 778,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 778,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 778,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 778,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 780,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 780,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 780,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 782,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 782,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 782,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 783,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 783,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 783,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 784,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 784,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 785,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 785,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 785,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 786,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 786,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 789,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 789,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 791,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 791,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 818,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 818,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 818,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 818,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 818,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 820,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 820,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 820,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 823,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 823,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 823,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 824,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 824,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 824,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 824,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 824,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 825,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 825,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 825,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 825,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 825,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 826,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 826,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 828,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 828,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 858,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 858,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 858,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 858,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 858,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 859,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 859,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 859,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 859,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 859,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 859,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 860,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 860,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 860,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 866,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 866,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 866,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 867,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 867,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 867,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 867,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 867,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 867,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 867,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 867,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 893,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 898,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 898,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 898,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 898,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 898,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 899,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 899,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 899,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 899,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 899,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 899,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 900,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 900,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 900,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 901,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 901,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 903,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 903,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 903,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 903,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 904,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 904,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 904,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 912,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 912,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 938,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 938,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 938,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 938,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 938,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 940,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 940,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 940,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 941,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 941,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 941,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 942,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 942,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 942,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 944,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 944,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 944,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 944,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 945,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 945,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 945,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 948,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 948,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 949,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 949,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 978,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 978,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 978,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 978,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 978,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 979,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 979,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 979,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 980,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 980,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 980,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 981,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 981,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 981,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 981,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 981,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 982,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 982,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 982,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 983,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 983,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 988,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 988,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 989,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 989,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1018,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1018,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1018,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1018,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1018,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1019,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1019,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1019,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1024,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1024,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1024,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1024,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1024,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1025,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1025,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1025,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1025,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1025,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1025,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1027,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1027,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1031,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1031,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1031,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1031,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1058,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1058,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1058,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1058,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1058,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1060,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1060,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1060,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1061,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1061,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1061,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1061,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1061,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1061,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1061,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1061,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1061,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1063,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1063,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1064,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1064,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1066,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1066,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1069,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1069,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1093,
+      "kind": "role",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1098,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1098,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1098,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1098,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1098,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1103,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1103,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1103,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1104,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1104,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1104,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1106,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1106,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1106,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1106,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1106,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1106,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1111,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1111,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1111,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1111,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1111,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1111,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1114,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1114,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1138,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1138,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1138,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1138,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1138,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1139,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1139,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1139,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1141,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1141,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1141,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1144,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1144,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1144,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1145,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1145,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1145,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1145,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1145,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1149,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1149,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1152,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1152,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1153,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1153,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1178,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1178,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1178,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1178,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1178,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1183,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1183,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1183,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1183,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1183,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1183,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1183,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1183,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1183,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1186,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1186,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1186,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1186,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1186,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1189,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1189,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1191,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1191,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1192,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1192,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1218,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1218,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1218,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1218,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1218,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1221,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1221,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1221,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1222,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1222,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1224,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1224,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1224,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1224,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1224,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1224,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1225,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1225,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1225,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1228,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1228,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1230,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1230,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1232,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1232,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1258,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1258,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1258,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1258,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1258,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1259,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1259,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1259,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1261,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1261,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1261,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1262,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1262,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1262,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1264,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1264,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1264,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1265,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1265,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1266,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1266,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1268,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1268,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1270,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1270,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1298,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1298,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1298,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1298,
+      "kind": "send",
+      "peer": 3,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "commit": 2,
+      "rpc": "AppendEntries"
+    },
+    {
+      "t": 1298,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1299,
+      "kind": "recv",
+      "peer": 1,
+      "from": 3,
+      "to": 1,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1299,
+      "kind": "send",
+      "peer": 1,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1299,
+      "kind": "commit",
+      "peer": 1,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1301,
+      "kind": "recv",
+      "peer": 0,
+      "from": 3,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1301,
+      "kind": "send",
+      "peer": 0,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1301,
+      "kind": "commit",
+      "peer": 0,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1302,
+      "kind": "recv",
+      "peer": 4,
+      "from": 3,
+      "to": 4,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1302,
+      "kind": "send",
+      "peer": 4,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1302,
+      "kind": "commit",
+      "peer": 4,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1303,
+      "kind": "recv",
+      "peer": 2,
+      "from": 3,
+      "to": 2,
+      "term": 2,
+      "rpc": "AppendEntries",
+      "ok": true
+    },
+    {
+      "t": 1303,
+      "kind": "send",
+      "peer": 2,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp"
+    },
+    {
+      "t": 1303,
+      "kind": "commit",
+      "peer": 2,
+      "term": 2,
+      "role": "follower",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1303,
+      "kind": "recv",
+      "peer": 3,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1303,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1306,
+      "kind": "recv",
+      "peer": 3,
+      "from": 1,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1306,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1308,
+      "kind": "recv",
+      "peer": 3,
+      "from": 4,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1308,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    },
+    {
+      "t": 1308,
+      "kind": "recv",
+      "peer": 3,
+      "from": 2,
+      "to": 3,
+      "term": 2,
+      "rpc": "AppendEntriesResp",
+      "ok": true
+    },
+    {
+      "t": 1308,
+      "kind": "commit",
+      "peer": 3,
+      "term": 2,
+      "role": "leader",
+      "commit": 2,
+      "log": 2
+    }
+  ]
+}

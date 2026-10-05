@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>raftlab trace</title>
+  <style>
+    :root { color-scheme: dark; }
+    body { margin: 0; font: 14px/1.4 ui-sans-serif, system-ui, sans-serif; background: #10140f; color: #e7ecdf; }
+    header { padding: 16px 20px; border-bottom: 1px solid #2a3326; }
+    h1 { font-size: 16px; margin: 0 0 6px; letter-spacing: 0.04em; }
+    p { margin: 0; color: #b7c2ae; max-width: 760px; }
+    .bar { display: flex; gap: 12px; align-items: center; padding: 12px 20px; }
+    input, button { background: #1c2418; color: #e7ecdf; border: 1px solid #3c4a34; padding: 6px 10px; }
+    #board { padding: 8px 20px 32px; overflow-x: auto; }
+    .row { display: grid; grid-template-columns: 72px 1fr; gap: 8px; align-items: center; margin: 6px 0; }
+    .lane { position: relative; height: 28px; background: #182016; border: 1px solid #2a3326; min-width: 640px; }
+    .mark { position: absolute; top: 4px; width: 8px; height: 18px; border-radius: 1px; }
+    .role { background: #d7ff4a; }
+    .commit { background: #7dcea0; }
+    .partition, .heal { background: #e07a5f; width: 2px; }
+    .crash, .restart { background: #f2cc8f; }
+    .legend { display: flex; gap: 14px; color: #b7c2ae; font-size: 12px; padding: 0 20px 12px; }
+    .sw { display: inline-block; width: 10px; height: 10px; margin-right: 4px; vertical-align: -1px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>raftlab / deterministic fault trace</h1>
+    <p id="blurb">Election safety and log matching under an injected partition. A minority cannot advance commit. After heal, logs converge and a committed entry is not lost.</p>
+  </header>
+  <div class="bar">
+    <input id="file" type="file" accept="application/json" />
+    <button id="demo" type="button">Load sample if embedded</button>
+    <span id="meta"></span>
+  </div>
+  <div class="legend">
+    <span><i class="sw role"></i>role / election</span>
+    <span><i class="sw commit"></i>commit</span>
+    <span><i class="sw partition"></i>partition or heal</span>
+    <span><i class="sw crash"></i>crash or restart</span>
+  </div>
+  <div id="board"></div>
+  <script>
+    const blurb = {
+      partition: "Minority partition cannot commit. Majority can. After heal, the overwritten suffix matches the committed log.",
+      crash: "Leader crash forces a higher term. Restart of the old leader must not dual-write a committed prefix.",
+      election: "One leader, one term, no faults. Heartbeats reset follower elections.",
+      asymmetric: "One-way cuts during election. At most one leader per term.",
+      conflict: "Uncommitted suffix on an isolated peer is discarded. The committed prefix remains."
+    };
+    function render(trace) {
+      document.getElementById("meta").textContent = trace.scenario + " · seed " + trace.seed + " · " + trace.events.length + " events";
+      document.getElementById("blurb").textContent = blurb[trace.scenario] || document.getElementById("blurb").textContent;
+      const board = document.getElementById("board");
+      board.innerHTML = "";
+      const tmax = Math.max(1, ...trace.events.map(e => e.t));
+      for (let peer = 0; peer < trace.peers; peer++) {
+        const row = document.createElement("div");
+        row.className = "row";
+        row.innerHTML = "<div>peer " + peer + "</div>";
+        const lane = document.createElement("div");
+        lane.className = "lane";
+        trace.events.filter(e => e.peer === peer || e.kind === "partition" || e.kind === "heal").forEach(e => {
+          if (!["role", "commit", "partition", "heal", "crash", "restart"].includes(e.kind)) return;
+          const m = document.createElement("div");
+          m.className = "mark " + e.kind;
+          m.style.left = (e.t / tmax * 100) + "%";
+          m.title = e.t + "ms " + e.kind + " term=" + (e.term || "") + " role=" + (e.role || "") + " commit=" + (e.commit || 0) + " " + (e.note || "");
+          lane.appendChild(m);
+        });
+        row.appendChild(lane);
+        board.appendChild(row);
+      }
+    }
+    document.getElementById("file").addEventListener("change", async (ev) => {
+      const file = ev.target.files[0];
+      if (!file) return;
+      render(JSON.parse(await file.text()));
+    });
+    document.getElementById("demo").addEventListener("click", async () => {
+      const res = await fetch("../traces/partition.json");
+      render(await res.json());
+    });
+  </script>
+</body>
+</html>
