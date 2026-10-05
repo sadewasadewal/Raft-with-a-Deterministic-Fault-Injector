@@ -8,8 +8,6 @@
 > **Single-process, deterministic Raft consensus engine with discrete-event fault injection.**  
 > Built strictly to the Figure 2 specification of Diego Ongaro's Raft paper (*"In Search of an Understandable Consensus Algorithm"*).
 
-*Looking for an intuitive, beginner-friendly introduction? Check out the [Plain English Explainer](README_SIMPLE.md).*
-
 ---
 
 ## 📖 Overview
@@ -181,8 +179,7 @@ raftlab/
 ├── traces/                   # Pre-generated / output JSON scenario traces
 ├── ui/
 │   └── index.html            # Timeline visualization dashboard
-├── README.md                 # Technical specification & project documentation
-└── README_SIMPLE.md          # Beginner-friendly guide with real-world analogies
+└── README.md                 # Technical specification & project documentation
 ```
 
 ---
